@@ -1,0 +1,116 @@
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					
+			</button>
+      <div class="navbar-collapse js-navbar-collapse">
+      <ul class="nav navbar-nav page-menu">
+        <li><a class="navbar-brand" [routerLink]="['/text']" style="color: whitesmoke; margin-top: 10pt;
+              margin-right: 20pt;">
+      <span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a class="navbar-brand" [routerLink]="['/']" style="color: whitesmoke;">
+      <h5 style="color: whitesmoke;">RKVBPET</h5></a>
+      <br/>
+      <h6 style="color: whitesmoke;">Smart Village</h6></li>
+      <li *ngIf="user">
+       <li *ngIf="authService.loggedIn()" style="margin-top: 20pt;margin-left: 20pt;color: blanchedalmond;">Welcome {{user.username}}..!!</li>
+      </ul>
+			
+      </div>
+
+		
+	    </div>
+     
+     <!-- Right part-->
+
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+       <!--  <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li> -->
+        <li class="dropdown">
+          <a href="#" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: whitesmoke;">Programs <span>
+                   <i class="glyphicon glyphicon-menu-down" aria-hidden="true"></i>
+          </span></a>
+          <ul class="dropdown-menu" style="display: none;  padding-top: 5px; margin-top: 0px; padding-bottom: 5px; margin-bottom: 0px;">
+          <li><a href="#">Education</a></li>
+          <li><a href="#">Skill Development</a></li>
+          <li><a href="#">Health Care</a></li>
+          <li><a href="#">Sports</a></li>
+        </ul>
+        </li>
+        <li class="dropdown">
+           <a href="#" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="color: ghostwhite;">Community Participation
+       <span>
+        <i class="glyphicon glyphicon-menu-down" aria-hidden="true"></i>
+              </span></a>
+    <ul class="dropdown-menu" style="display: none;  padding-top: 5px; margin-top: 0px; padding-bottom: 5px; margin-bottom: 0px;">
+      <li><a href="#">Post a Problem</a></li>
+      <li><a href="#">Share your Queries</a></li>
+      <li><a href="#">List post views</a></li>
+      <li><a href="#">List Success Stories</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+           <a href="#" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" style="color: whitesmoke;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >About Us
+       <span class="pull-right">
+                   <!-- <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i> -->
+                  <i class="glyphicon glyphicon-menu-down" aria-hidden="true"></i>
+              </span></a>
+    <ul class="dropdown-menu" style="display: none;  padding-top: 5px; margin-top: 0px; padding-bottom: 5px; margin-bottom: 0px;">
+      <li><a href="#">Profile</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">Mission</a></li>
+      <li><a href="#">Objectives</a></li>
+    </ul>
+  </li>
+   <li class="dropdown">
+           <a href="#" *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" style="color: whitesmoke;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >Contact Us
+       <span class="pull-right">
+                   <!-- <i class="icon icon-up-arrow up-arrow" aria-hidden="true"></i> -->
+                  <i class="glyphicon glyphicon-menu-down" aria-hidden="true"></i>
+              </span></a>
+    <ul class="dropdown-menu" style="display: none;  padding-top: 5px; margin-top: 0px; padding-bottom: 5px; margin-bottom: 0px;">
+      <li><a href="#">9945344335</a></li>
+      <li><a href="#">rkvbpet.smartvillage@gmail.com</a></li>
+                 
+    </ul>
+  </li>
+
+
+  
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+         <li>
+          <a *ngIf="authService.loggedIn()"[routerLinkActive]="['active']" 
+              [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/profile']" style="color: whitesmoke;">Profile </a>
+        </li>
+        <li><a *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" 
+              [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/login']" style="color: whitesmoke;    margin-top: 7pt;">
+              <span class="fa fa-unlock-alt"></span>
+              Login </a>
+        </li>
+        <li class="dropdown">
+          <a *ngIf="!authService.loggedIn()" [routerLinkActive]="['active']" 
+              [routerLinkActiveOptions]="{exact:true}" [routerLink]="['/register']" 
+              style="color: whitesmoke;">
+              <span class="fa fa-user"></span>
+              Register </a>
+        </li>
+         <li *ngIf="authService.loggedIn()"><a (click)="onLogoutClick()" href="#" 
+              style="color: whitesmoke;">Logout </a>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+ 	</div>
+ </nav>
+
+
+
+   

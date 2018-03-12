@@ -1,0 +1,123 @@
+<!-- <div class="container">
+	<div class="well"> -->
+<div class="container">		
+	<div class="row">
+		<div class="Absolute-Center is-Responsive">
+		<h2 class="page-header" style="margin-left: 68pt;margin-top:10pt;border-bottom: none;">Register</h2>
+		<form (submit)="onRegisterSubmit()"> 
+		<!-- <div class="col-md-5"> -->
+			<div class="form-group input-group">
+				<input type="text" [(ngModel)]="firstname" name="firstname" class="form-control" 
+				placeholder="FirstName" style="width: 240pt">
+			</div>
+			<div class="form-group input-group">
+				<input type="text" [(ngModel)]="lastname" name="lastname" class="form-control" 
+				placeholder="LastName" style="width: 240pt"> 
+			</div>
+			
+			
+		    <!-- <div class="field-wrap">
+			<input type="text" [(ngModel)]="postalcode" name="postalcode" class="form-control" 
+			placeholder="Postalcode">
+			</div>
+			<div cclass="field-wrap">
+				<input type="text" [(ngModel)]="city" name="city" class="form-control"
+				 placeholder="City">
+			</div>
+
+			<div class="field-wrap">
+			<input type="text" [(ngModel)]="street" name="street" class="form-control" 
+			placeholder="Street">
+		    </div>
+	
+			<div class="field-wrap">
+				<input type="text" [(ngModel)]="state" name="state" class="form-control" 
+				placeholder="State">
+			</div>
+			<div class="field-wrap">
+				<input type="date" [(ngModel)]="dob" name="dob" class="form-control" 
+				placeholder="Date Of Birth">
+			</div> -->
+			<div class="form-group input-group">
+				<input type="text" [(ngModel)]="email" name="email" class="form-control" 
+				placeholder="Email" style="width: 240pt">
+			</div>
+			<div class="form-group input-group">
+				<input type="number" [(ngModel)]="mobno" name="mobno" class="form-control"
+				placeholder="Mobile No" style="width: 240pt">
+			</div>
+			<div class="form-group input-group">
+				<input type="text" [(ngModel)]="username" name="username" class="form-control"
+				placeholder="UserName" style="width: 240pt">
+			</div>
+			<div class="form-group input-group">
+				<input type="password" [(ngModel)]="password" name="password" class="form-control" 
+				placeholder="Password" style="width: 240pt">
+			</div>
+			<!-- <div class="form-group">
+            <button type="button"  style="width: 240pt" class="btn btn-primary">Sign Up</button>
+    		</div> -->
+		<!-- </div> -->
+		<input type="submit" style="width: 240pt" class="btn btn-primary" value="Sign up">
+		<!-- <a href="/" class="btn btn-default" style="width: 240pt"> Cancel</a> -->
+		</form>
+	</div>
+	</div>
+</div>
+
+<!-- <form (submit)="onRegisterSubmit()"> 
+	<div class="form-group input-group">
+		<label>First Name</label>
+		<input type="text" [(ngModel)]="firstname" name="firstname" class="form-control">
+	</div>
+	<div class="form-group input-group">
+		<label>Last Name</label>
+		<input type="text" [(ngModel)]="lastname" name="lastname" class="form-control">
+	</div>
+	<div class="form-group input-group">
+		<label>Date of Birth</label>
+		<input type="date" [(ngModel)]="dob" name="dob" class="form-control">
+	</div>
+
+	<div class="form-group input-group">
+		<label>Address</label>
+		<div class="form-group">
+		<label>Street</label>
+		<input type="text" [(ngModel)]="street" name="street" class="form-control">
+		<label>Postal Code</label>
+		<input type="text" [(ngModel)]="postalcode" name="postalcode" class="form-control">
+		<label>City</label>
+		<input type="text" [(ngModel)]="city" name="city" class="form-control">
+		<label>State</label>
+		<input type="text" [(ngModel)]="state" name="state" class="form-control">
+		
+		</div>
+	</div>
+	<div class="form-group input-group">
+		<label>Email</label>
+		<input type="text" [(ngModel)]="email" name="email" class="form-control">
+	</div>
+	<div class="form-group input-group">
+		<label>Mobile No</label>
+		<input type="number" [(ngModel)]="mobno" name="mobno" class="form-control">
+	</div>
+	<div class="form-group input-group">
+		<label>UserName</label>
+		<input type="text" [(ngModel)]="username" name="username" class="form-control">
+	</div>
+	
+	
+	
+	<div class="form-group input-group">
+		<label>Password</label>
+		<input type="password" [(ngModel)]="password" name="password" class="form-control">
+	</div>
+	
+	<input type="submit" class="btn btn-primary" value="Submit">
+	<a href="/" class="btn btn-default"> Cancel</a>
+	
+</form>
+</div>
+
+
+ -->
